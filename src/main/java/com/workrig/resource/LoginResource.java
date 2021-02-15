@@ -31,7 +31,7 @@ public class LoginResource {
 
 	@CrossOrigin(origins = "*")
 	@GetMapping("/checklogin/{username}/{password}")
-	public boolean checkCredentials(@PathVariable String username, @PathVariable String password) {
+	public Login checkCredentials(@PathVariable String username, @PathVariable String password) {
 		System.out.println("inside checkCredentials() of LoginResource ");
 		return loginservice.isUserAuthenticated(username, password);
 		

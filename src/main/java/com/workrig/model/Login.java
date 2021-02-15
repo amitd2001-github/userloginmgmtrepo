@@ -17,7 +17,15 @@ public class Login {
 	private String password;
     @Column(name = "role")
 	private String role;
+    
+    private boolean isAuthenticated;
 	
+	public boolean isAuthenticated() {
+		return isAuthenticated;
+	}
+	public void setAuthenticated(boolean isAuthenticated) {
+		this.isAuthenticated = isAuthenticated;
+	}
 	public int getUserid() {
 		return userid;
 	}

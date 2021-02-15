@@ -26,15 +26,19 @@ public class LoginServiceImpl implements ILoginService {
 	}
 
 	@Override
-	public boolean isUserAuthenticated(String username, String password) {
+	public Login isUserAuthenticated(String username, String password) {
 		boolean isUserAuthenticated = false;
 		Login login = getLoggedInUser(username,password);
 		if(login != null) {
 			if(username.equals(login.getUsername()) && password.equals(login.getPassword())) {
 				isUserAuthenticated = true;
+				login.setAuthenticated(isUserAuthenticated);
+				return login;
 			}
-		}	
-		return isUserAuthenticated;
+		}
+		login = new Login();
+		login.setAuthenticated(isUserAuthenticated);
+		return login;
 	}
 
 	

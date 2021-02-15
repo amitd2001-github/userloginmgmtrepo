@@ -8,6 +8,6 @@ public interface ILoginService {
 
 	public List<Login> getAllLoggedInUsers();
 	public Login getLoggedInUser(String username,String password);
-	public boolean isUserAuthenticated(String username,String password);
+	public Login isUserAuthenticated(String username,String password);
 	
 }
