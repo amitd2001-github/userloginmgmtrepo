@@ -3,10 +3,12 @@ package com.workrig.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.workrig.dao.LoginRepository;
 import com.workrig.model.Login;
 
+@Service
 public class LoginServiceImpl implements ILoginService {
 
 	@Autowired
