@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.workrig.dao.LoginRepository;
 import com.workrig.dao.UserRepository;
 import com.workrig.exception.UserNotFoundException;
 import com.workrig.model.User;
@@ -15,6 +16,9 @@ public class UserServiceImpl implements IUserService {
 
 	@Autowired
 	private UserRepository userrepos;
+	
+	@Autowired
+	private LoginRepository loginrepos;
 	
 	@Override
 	public void registerUser(User user) {
