@@ -6,4 +6,7 @@ import com.workrig.model.Login;
 
 public interface LoginRepository extends JpaRepository<Login, Integer> {
 
+	
+	Login findByUsernameAndPassword(String username, String password);
+
 }
