@@ -10,5 +10,6 @@ public interface IUserService {
 	public void registerUser(User user);
 	public User getUser(int id) throws UserNotFoundException;
 	public List<User> getAllUsers();
+	public void deleteUser(int id);
 
 }

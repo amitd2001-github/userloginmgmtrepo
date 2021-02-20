@@ -52,4 +52,9 @@ public class UserServiceImpl implements IUserService {
 		return userrepos.findAll();
 	}
 
+	@Override
+	public void deleteUser(int id) {
+		userrepos.deleteById(id);
+	}
+
 }

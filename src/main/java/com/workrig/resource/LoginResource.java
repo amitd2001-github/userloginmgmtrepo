@@ -13,7 +13,6 @@ import com.workrig.model.User;
 import com.workrig.service.ILoginService;
 
 
-
 @RestController
 @CrossOrigin(origins = "*")
 public class LoginResource {
