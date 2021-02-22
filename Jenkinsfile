@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage ('Compile Stage')
             steps{
-                    withMaven(maven : 'G:\CorporateTrainings\Softra\Softra\Softwares\apache-maven-3.3.3\bin'){
+                    withMaven(maven : 'G:\\CorporateTrainings\\Softra\\Softra\\Softwares\\apache-maven-3.3.3\\bin'){
                         sh 'mvn clean compile'
                     }
             }    
@@ -11,7 +11,7 @@ pipeline{
 
         stage ('Testing Stage')
             steps{
-                    withMaven(maven : 'G:\CorporateTrainings\Softra\Softra\Softwares\apache-maven-3.3.3\bin'){
+                    withMaven(maven : 'G:\\CorporateTrainings\\Softra\\Softra\\Softwares\\apache-maven-3.3.3\\bin'){
                         sh 'mvn test'
                     }
             }    
@@ -19,7 +19,7 @@ pipeline{
 
         stage ('Deployment Stage')
             steps{
-                    withMaven(maven : 'G:\CorporateTrainings\Softra\Softra\Softwares\apache-maven-3.3.3\bin'){
+                    withMaven(maven : 'G:\\CorporateTrainings\\Softra\\Softra\\Softwares\\apache-maven-3.3.3\\bin'){
                         sh 'mvn deploy'
                     }
             }    
