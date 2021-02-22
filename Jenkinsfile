@@ -22,7 +22,5 @@ pipeline{
                     withMaven(maven : 'G:\\CorporateTrainings\\Softra\\Softra\\Softwares\\apache-maven-3.3.3\\bin'){
                         sh 'mvn deploy'
                     }
-            }    
-        
-    }
+            } 
 }
